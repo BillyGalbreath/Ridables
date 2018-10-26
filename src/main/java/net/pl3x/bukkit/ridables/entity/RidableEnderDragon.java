@@ -87,11 +87,7 @@ public class RidableEnderDragon extends EntityEnderDragon implements RidableEnti
     }
 
     public EntityPlayer updateRider() {
-        if (passengers == null || passengers.isEmpty()) {
-            return rider = null;
-        }
-        Entity entity = passengers.get(0);
-        return rider = entity instanceof EntityPlayer ? (EntityPlayer) entity : null;
+        return rider = RideableEntity.updateRider(passengers);
     }
 
     public void useAIController() {

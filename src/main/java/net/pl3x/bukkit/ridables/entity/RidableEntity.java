@@ -19,6 +19,7 @@ import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
+import java.util.List;
 import java.util.UUID;
 
 public interface RidableEntity {
@@ -83,6 +84,14 @@ public interface RidableEntity {
      * @return Current rider, otherwise null
      */
     EntityPlayer updateRider();
+
+    static EntityPlayer updateRider(final List<net.minecraft.server.v1_13_R2.Entity> passengers) {
+        if (passengers == null || passengers.isEmpty()) {
+            return null;
+        }
+        final net.minecraft.server.v1_13_R2.Entity entity = passengers.get(0);
+        return entity instanceof EntityPlayer ? (EntityPlayer) entity : null;
+    }
 
     default boolean tryRide(EntityHuman entityhuman) {
         Player player = (Player) entityhuman.getBukkitEntity();

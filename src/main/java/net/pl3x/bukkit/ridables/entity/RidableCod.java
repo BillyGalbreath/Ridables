@@ -82,13 +82,7 @@ public class RidableCod extends EntityCod implements RidableEntity {
     }
 
     public EntityPlayer updateRider() {
-        if (passengers == null || passengers.isEmpty()) {
-            rider = null;
-        } else {
-            Entity entity = passengers.get(0);
-            rider = entity instanceof EntityPlayer ? (EntityPlayer) entity : null;
-        }
-        return rider;
+        return rider = RideableEntity.updateRider(passengers);
     }
 
     public void useAIController() {
