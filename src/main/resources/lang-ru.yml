@@ -1,0 +1,19 @@
+command-no-permission: "&cУ Вас нет прав на эту команду!"
+collect-no-permission: "&cУ Вас нет прав на подбор этого существа!"
+ride-no-permission: "&cУ Вас недостаточно прав, чтобы оседлать это существо!"
+shoot-no-permission: "&cУ Вас нет прав на стрельбу!"
+ride-requires-saddle: "&cВам нужно седло, чтобы оседлать этого моба!"
+disabled-commands-while-riding: "&cВы не можете использовать команды во время езды!"
+
+# ВНИМАНИЕ! Изменение значений "bucket" сделают предыдущие некорректными!
+#           Не советуется изменять эти значения, когда игроки уже начали
+#           создавать вёдра c мобами.
+bucket-name: "&bВедро существа {creature}"
+bucket-lore: "Это ведро содержит {creature}!\nПКМ для размещения существа"
+
+reload:
+  config: "&e[&3Ridables&e]&a Перезагружаю config.yml..."
+  lang: "&e[&3Ridables&e]&a Перезагружаю файл языка..."
+  mob-configs: "&e[&3Ridables&e]&a Перезагружаю файлы мобов..."
+  mob-attributes: "&e[&3Ridables&e]&a Перезагружаю атрибуты мобов..."
+  complete: "&e[&3Ridables&e]&a Перезагрузка завершена."
